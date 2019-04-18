@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { DateTime } from 'luxon';
 import * as d3 from 'd3-geo';
-import * as topojson from 'topojson-client';
 
 import { getEarthInfo, EarthInfo } from './daylight_map/earth_info';
 import { GLMapRenderer } from './daylight_map/map_renderer';
