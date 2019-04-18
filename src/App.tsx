@@ -107,7 +107,7 @@ export class App extends React.Component {
     const roundedX = Math.round(x);
     const roundedY = Math.round(y);
     const formattedTime = remote.timezone
-      ? DateTime.local()
+      ? DateTime.fromMillis(this.state.time)
           .setZone(remote.timezone)
           .toLocaleString(DateTime.TIME_SIMPLE)
       : null;
