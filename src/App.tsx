@@ -10,7 +10,7 @@ import nightImgSrc from './basemaps/night_4800.jpg';
 import { fetchRemotes, RemoteWithLocationData } from './remotes';
 
 function isProduction() {
-  return process.env.NODE_ENVIRONMENT === 'production';
+  return window.location.hostname !== 'localhost';
 }
 
 const SYSTEM_FONT = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`;
