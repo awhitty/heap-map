@@ -26,7 +26,7 @@ vec4 blendColors(vec4 day, vec4 night, float angle) {
   if (angle <= -0.1) {
     return night;
   } else if (angle < 0.1) {
-    float fractionDay = (angle + 0.1) * 5.0;
+    float fractionDay = pow((angle + 0.1) * 5.0, 3.0);
     return (fractionDay * day) + ((1.0 - fractionDay) * night);
   } else if (angle > 0.95 && day.b > day.r && day.b > day.g) {
     float fractionNotReflection = (1.0 - angle) * 20.0;
