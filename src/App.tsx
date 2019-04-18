@@ -9,7 +9,12 @@ import dayImgSrc from './basemaps/day_4800.jpg';
 import nightImgSrc from './basemaps/night_4800.jpg';
 import { fetchRemotes, RemoteWithLocationData } from './remotes';
 
+function isProduction() {
+  return process.env.NODE_ENVIRONMENT === 'production';
+}
+
 const SYSTEM_FONT = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`;
+const COMMIT_REF = isProduction() ? process.env.COMMIT_REF : 'NO_REF';
 
 function fetchImage(url: string): Promise<HTMLImageElement> {
   return new Promise(resolve => {
@@ -142,7 +147,17 @@ export class App extends React.Component {
       const time = DateTime.local().toMillis();
       this.setState({time});
       this.renderMap();
+      this.checkDeployedCommit();
     }, 1000);
+  }
+
+  private async checkDeployedCommit() {
+    if (isProduction()) {
+      const {ref} = await fetch('/.netlify/functions/ref').then(res => res.json());
+      if (ref !== COMMIT_REF) {
+        location.reload();
+      }
+    }
   }
 
   private async fetchRemotes() {
