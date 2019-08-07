@@ -15,15 +15,16 @@ export type RemoteWithLocationData = Remote & {
 
 const remotes: Remote[] = [
   { name: 'Tim', location: 'Bengaluru, India' },
-  { name: 'James, Talos, Dan', location: 'Manhattan, New York, United States' },
+  { name: 'James, Talos, Dan L', location: 'Manhattan, New York, United States' },
   { name: 'Kamal', location: 'Montreal, Quebec, Canada' },
   { name: 'Gediminas', location: 'Vilnius, Lithuania' },
   { name: 'Jerry', location: 'Sydney, Australia' },
   { name: 'Ivan', location: 'Sofia, Bulgaria' },
   { name: 'Luke', location: 'Raleigh, North Carolina, United States' },
   { name: 'Andy', location: 'Omaha, Nebraska, United States' },
-  { name: 'Andrew', location: 'Croatia' },
+  { name: 'Andrew', location: 'Split, Croatia' },
   { name: 'SF', location: 'San Francisco, California, United States' },
+  { name: '𝐃𝐚𝐧 𝐑𝐨𝐛𝐢𝐧𝐬𝐨𝐧, 𝐂𝐓𝐎', location: 'San Francisco, California, United States' },
   { name: 'Kevin', location: 'Salt Lake City, Utah, United States' },
   { name: 'Cameron', location: 'Wagga Wagga, NSW, Australia' },
   { name: 'Greg and Michael', location: 'St. Louis, Missouri, United States' },
