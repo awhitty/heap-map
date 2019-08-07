@@ -14,20 +14,20 @@ export type RemoteWithLocationData = Remote & {
 };
 
 const remotes: Remote[] = [
-  { name: 'Tim', location: 'San Francisco, California, USA' },
-  { name: 'James and Talos', location: 'San Francisco, California, USA' },
-  { name: 'Kamal', location: 'San Francisco, California, USA' },
-  { name: 'Gediminas', location: 'San Francisco, California, USA' },
-  { name: 'Jerry', location: 'San Francisco, California, USA' },
-  { name: 'Ivan', location: 'San Francisco, California, USA' },
-  { name: 'Luke', location: 'San Francisco, California, USA' },
-  { name: 'Andy', location: 'San Francisco, California, USA' },
-  { name: 'Andrew', location: 'San Francisco, California, USA' },
-  { name: 'SF', location: 'San Francisco, California, USA' },
-  { name: 'Kevin', location: 'San Francisco, California, USA' },
-  { name: 'Cameron', location: 'San Francisco, California, USA' },
-  { name: 'Greg', location: 'San Francisco, California, USA' },
-  { name: 'Dustin', location: 'San Francisco, California, USA' },
+  { name: 'Tim', location: 'Bengaluru, India' },
+  { name: 'James, Talos, Dan', location: 'Manhattan, New York, United States' },
+  { name: 'Kamal', location: 'Montreal, Quebec, Canada' },
+  { name: 'Gediminas', location: 'Vilnius, Lithuania' },
+  { name: 'Jerry', location: 'Sydney, Australia' },
+  { name: 'Ivan', location: 'Sofia, Bulgaria' },
+  { name: 'Luke', location: 'Raleigh, North Carolina, United States' },
+  { name: 'Andy', location: 'Omaha, Nebraska, United States' },
+  { name: 'Andrew', location: 'Croatia' },
+  { name: 'SF', location: 'San Francisco, California, United States' },
+  { name: 'Kevin', location: 'Salt Lake City, Utah, United States' },
+  { name: 'Cameron', location: 'Wagga Wagga, NSW, Australia' },
+  { name: 'Greg and Michael', location: 'St. Louis, Missouri, United States' },
+  { name: 'Howie', location: 'Austin, Texas, United States' },
 ];
 
 export function fetchRemotes(): Promise<RemoteWithLocationData[]> {
