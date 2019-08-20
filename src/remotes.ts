@@ -18,7 +18,7 @@ const remotes: Remote[] = [
   { name: 'James, Talos, Dan L', location: 'Manhattan, New York, United States' },
   { name: 'Kamal', location: 'Montreal, Quebec, Canada' },
   { name: 'Gediminas', location: 'Vilnius, Lithuania' },
-  { name: 'Jerry', location: 'Sydney, Australia' },
+  { name: 'Jerry and Allan', location: 'Sydney, Australia' },
   { name: 'Ivan', location: 'Sofia, Bulgaria' },
   { name: 'Luke', location: 'Raleigh, North Carolina, United States' },
   { name: 'Andy', location: 'Omaha, Nebraska, United States' },
@@ -26,7 +26,7 @@ const remotes: Remote[] = [
   { name: 'SF', location: 'San Francisco, California, United States' },
   { name: 'Kevin', location: 'Salt Lake City, Utah, United States' },
   { name: 'Cameron', location: 'Wagga Wagga, NSW, Australia' },
-  { name: 'Greg and Michael', location: 'St. Louis, Missouri, United States' },
+  { name: 'Greg and Mike', location: 'St. Louis, Missouri, United States' },
   { name: 'Howie', location: 'Austin, Texas, United States' },
 ];
 
