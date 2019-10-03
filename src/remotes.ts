@@ -50,7 +50,7 @@ export function fetchRemotes(): Promise<RemoteWithLocationData[]> {
       endpointBuilder(remote)
     )
       .then(res => res.json())
-      .then((json) =>
+      .then(json =>
         json.features && json.features.length > 0
           ? json.features[0].center
           : null,
