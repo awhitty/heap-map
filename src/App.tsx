@@ -81,7 +81,6 @@ export class App extends React.Component {
     pageWidth: 0,
     anchors: [] as AnchorNode<RemoteWithLocationData>[],
     labels: [] as LabelNode<RemoteWithLocationData>[],
-    lastRefresh: Date.now(),
   };
 
   get width(): number {
