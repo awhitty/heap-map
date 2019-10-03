@@ -74,12 +74,14 @@ function fetchImage(url: string): Promise<HTMLImageElement> {
 export class App extends React.Component {
   canvas: HTMLCanvasElement | null = null;
   mapRenderer: GLMapRenderer | null = null;
+  interval: any;
 
   state = {
     time: DateTime.local().toMillis(),
     pageWidth: 0,
     anchors: [] as AnchorNode<RemoteWithLocationData>[],
     labels: [] as LabelNode<RemoteWithLocationData>[],
+    lastRefresh: Date.now(),
   };
 
   get width(): number {
@@ -103,6 +105,7 @@ export class App extends React.Component {
     this.setupAndDrawMap();
     this.fetchRemotes();
     this.startUpdatingTimer();
+    this.interval = setInterval(() => this.fetchRemotes(), 1000 * 60 * 60 * 24);
   }
 
   render() {
