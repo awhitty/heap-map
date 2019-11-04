@@ -5,7 +5,7 @@ const ACCESS_TOKEN = process.env.MAPBOX_API_TOKEN;
 
 type GeocodeApiName = 'mapbox' | 'andrewwebb';
 type GeocodeApiEndpointFn = (remote: Remote) => string;
-type geocodeApis = { [key in GeocodeApiName]: GeocodeApiEndpointFn};
+type geocodeApis = { [key in GeocodeApiName]: GeocodeApiEndpointFn };
 
 type Remote = {
   name: string;
