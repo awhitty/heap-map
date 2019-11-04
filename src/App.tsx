@@ -74,7 +74,7 @@ function fetchImage(url: string): Promise<HTMLImageElement> {
 export class App extends React.Component {
   canvas: HTMLCanvasElement | null = null;
   mapRenderer: GLMapRenderer | null = null;
-  interval: any;
+  interval: number;
 
   state = {
     time: DateTime.local().toMillis(),
