@@ -3,7 +3,7 @@ import 'dotenv/config';
 const MAPBOX_API_ENDPOINT = 'https://api.mapbox.com';
 const ACCESS_TOKEN = process.env.MAPBOX_API_TOKEN;
 
-type GeocodeApiName = 'mapbox' | 'andrewwebb';
+type GeocodeApiName = 'mapbox';
 type GeocodeApiEndpointFn = (remote: Remote) => string;
 type geocodeApis = { [key in GeocodeApiName]: GeocodeApiEndpointFn };
 
@@ -15,7 +15,6 @@ type Remote = {
 
 const geocodeEndpoints: geocodeApis = {
   mapbox: (remote: Remote) => `${MAPBOX_API_ENDPOINT}/geocoding/v5/mapbox.places/${remote.location}.json?access_token=${ACCESS_TOKEN}&types=place&limit=1`,
-  andrewwebb: (remote: Remote) => `https://andrewwebb.herokuapp.com/api/where-are-you/?access_token=${process.env.ANDREWWEBB_API_TOKEN}`
 };
 
 export type RemoteWithLocationData = Remote & {
@@ -32,7 +31,6 @@ const remotes: Remote[] = [
   { name: 'Ivan', location: 'Sofia, Bulgaria' },
   { name: 'Luke', location: 'Raleigh, North Carolina, United States' },
   { name: 'Andy', location: 'Omaha, Nebraska, United States' },
-  { name: 'Webb', api: 'andrewwebb'},
   { name: 'SF HQ', location: 'San Francisco, California, United States' },
   { name: 'Kevin', location: 'Salt Lake City, Utah, United States' },
   { name: 'Greg and Mike', location: 'St. Louis, Missouri, United States' },
