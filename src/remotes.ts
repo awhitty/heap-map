@@ -30,9 +30,7 @@ const remotes: Remote[] = [
   { name: 'Jerry, Cam, and Allan', location: 'Sydney, Australia' },
   { name: 'Ivan', location: 'Sofia, Bulgaria' },
   { name: 'Luke', location: 'Raleigh, North Carolina, United States' },
-  { name: 'Andy', location: 'Omaha, Nebraska, United States' },
   { name: 'SF HQ', location: 'San Francisco, California, United States' },
-  { name: 'Kevin', location: 'Salt Lake City, Utah, United States' },
   { name: 'Greg and Mike', location: 'St. Louis, Missouri, United States' },
   { name: 'Howie', location: 'Austin, Texas, United States' },
 ];
