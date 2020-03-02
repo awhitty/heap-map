@@ -35,6 +35,8 @@ const remotes: Remote[] = [
   { name: 'Howie and Dan', location: 'Austin, Texas, United States' },
   { name: 'Dustin', location: 'Sacramento, California, United States' },
   { name: 'James', location: 'Bogota, Colombia' },
+  { name: 'Matt', location: 'Orlando, Florida, United States' },
+  { name: 'Diego', location: 'Brazil' },
 ];
 
 export function fetchRemotes(): Promise<RemoteWithLocationData[]> {
